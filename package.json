@@ -1,0 +1,26 @@
+{
+  "name": "learningnodejs",
+  "version": "1.0.0",
+  "description": "Learning Node.js on course [Node.js Crash Course Tutorial](https://www.youtube.com/watch?v=zb3Qk8SG5Ms&list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU)",
+  "main": "files.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgesalhani/LearningNodeJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorgesalhani/LearningNodeJs/issues"
+  },
+  "homepage": "https://github.com/jorgesalhani/LearningNodeJs#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
