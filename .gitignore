@@ -1,3 +1,6 @@
 # VENV
 *node-course
 *.env
+
+# NODE MODULES
+node_modules
