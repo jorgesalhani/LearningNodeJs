@@ -4,9 +4,41 @@ const express = require('express');
 // ==========================
 const app = express();
 
+// REGISTER VIEW ENGINE
+// ====================
+app.set('view engine', 'ejs');
+// app.set('views', 'myviews'); -< Change directory
+
 // LISTEN FOR REQUESTS
 // ===================
 app.listen(3000);
+
+app.get('/', (req, res) => {
+    const blogs = [
+        {title: 'LSD', snippet: 'Labrinth, Sia, Diplo'},
+        {title: 'Cê', snippet: 'Caetano Veloso'},
+        {title: 'Totya', snippet: 'Toufic Farroukh'},
+    ]
+    res.render('index', { title: 'Home', blogs: blogs});
+});
+
+app.get('/about', (req, res) => {
+    res.render('about', { title: 'About'});
+});
+
+app.get('/blogs/create', (req, res) => {
+    res.render('create', { title: 'Create Blog'});
+})
+
+app.use((req, res) => {
+    res.status(404).render('404', { title: '404'});
+});
+
+
+
+
+/* FIRST REQUESTS
+   ==============
 
 app.get('/', (req, res) => {
     // res.send('<p>Home Page</p>');
@@ -30,3 +62,4 @@ app.get('/about-us', (req, res) => {
 app.use((req, res) => {
     res.status(404).sendFile('./views/404.html', {root: __dirname});
 });
+*/
