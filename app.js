@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 
 // INSTANCE OF AN EXPRESS APP
 // ==========================
@@ -12,6 +13,16 @@ app.set('view engine', 'ejs');
 // LISTEN FOR REQUESTS
 // ===================
 app.listen(3000);
+
+
+// MIDDLEWARE CONCEPTS
+// ===================
+app.use(express.static('public'));
+app.use(morgan('dev'));
+
+// STATIC FILES
+// ============
+
 
 app.get('/', (req, res) => {
     const blogs = [
